@@ -1,0 +1,27 @@
+.about{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1517px;
+    align-items: center;
+}
+
+.about img{
+    max-width: 250px;
+    max-height: 200px;
+}
+
+.about a{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+}
+.about i {
+    width: 30px;
+    height: 30px;
+}
+.about button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0 10px;
+}
