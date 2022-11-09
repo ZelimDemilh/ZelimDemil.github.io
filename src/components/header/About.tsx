@@ -6,11 +6,13 @@ import style from "./header.module.css";
 const About: FC = () => {
   return (
     <div className={style.about}>
-      <img src={logo} alt="logo" />
-      <Link to="#">
+     <Link to="/">
+       <img src={logo} alt="logo" />
+     </Link>
+      <Link to="/signIn">
         <div>
           <i className="bi bi-person-circle"></i>
-          <button>
+          <button className="text_primary">
             Авторизироваться
           </button>
         </div>

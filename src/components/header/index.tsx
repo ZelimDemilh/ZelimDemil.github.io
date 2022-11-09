@@ -4,20 +4,21 @@ import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import SearchForm from "./SearchForm";
 import Navbar from "./Navbar";
 import About from "./About";
+import style from "./header.module.css";
 
 const Header = () => {
+  const dispatch = useAppDispatch();
+
   const { categories, isLoading, error } = useAppSelector(
     (state) => state.CategorySlice
   );
-  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(getCategories());
   }, [dispatch]);
 
-  console.log(categories);
   return (
-    <div>
+    <div className={style.header}>
       <About/>
       <SearchForm categories={categories} />
       <Navbar />

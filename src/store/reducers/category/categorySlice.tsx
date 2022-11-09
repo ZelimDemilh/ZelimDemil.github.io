@@ -1,7 +1,6 @@
 import { ICategory } from "../../../models/ICategory";
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { getCategories } from "./categoryFunc";
-import axios from "axios";
 
 interface CategoryState {
   categories: ICategory[];

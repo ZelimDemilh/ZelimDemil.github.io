@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { ICategory } from "../../models/ICategory";
-import style from "./header.module.css";
 
 interface SearchFormProps {
   categories: ICategory[];
@@ -8,8 +7,12 @@ interface SearchFormProps {
 
 const SearchForm: FC<SearchFormProps> = ({ categories }) => {
   return (
-    <div >
-      </div>
+    <div>
+        <i className="bi bi-geo-alt-fill"></i>
+        <form>
+          <input type="search" placeholder="поиск"/>
+        </form>
+    </div>
   );
 };
 

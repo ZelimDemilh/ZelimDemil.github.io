@@ -1,13 +1,17 @@
+.header{
+
+}
+
 .about{
     display: flex;
     justify-content: space-between;
     max-width: 1517px;
     align-items: center;
+    border-bottom: 1px solid #808080;
 }
 
 .about img{
     max-width: 250px;
-    max-height: 200px;
 }
 
 .about a{
