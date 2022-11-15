@@ -10,12 +10,10 @@ const About: FC = () => {
        <img src={logo} alt="logo" />
      </Link>
       <Link to="/signIn">
-        <div>
           <i className="bi bi-person-circle"></i>
-          <button className="text_primary">
+          <span className="text_primary">
             Авторизироваться
-          </button>
-        </div>
+          </span>
       </Link>
     </div>
   );

@@ -5,19 +5,17 @@
 .about{
     display: flex;
     justify-content: space-between;
-    max-width: 1517px;
     align-items: center;
+    max-width: 1517px;
     border-bottom: 1px solid #808080;
 }
-
 .about img{
-    max-width: 250px;
+    max-width: 50%;
 }
-
 .about a{
+    max-width: 30%;
     text-decoration: none;
     cursor: pointer;
-    display: flex;
 }
 .about i {
     width: 30px;
@@ -29,3 +27,51 @@
     border: none;
     padding: 0 10px;
 }
+.searchForm{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    align-items: center;
+}
+.searchForm div{
+    background: #FFAE5D;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.searchForm form{
+    position: relative;
+    min-width: 25%;
+}
+.searchForm form i {
+    color: #808080;
+    position: absolute;
+    top: 20%;
+    right: 3%;
+    cursor: pointer;
+    padding: 5px;
+}
+.searchForm form input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    color: #808080;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBar a {
+    color: #606060;
+}
+
+
+@media (max-width: 900px) {
+    .about img{
+        max-width: 100%;
+    }
+}
+

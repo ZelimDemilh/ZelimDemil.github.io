@@ -1,16 +1,21 @@
 import React, { FC } from "react";
-import { ICategory } from "../../models/ICategory";
+import style from "./header.module.css";
 
 interface SearchFormProps {
-  categories: ICategory[];
+  value: string,
+  setValue: (text:string) => void
 }
 
-const SearchForm: FC<SearchFormProps> = ({ categories }) => {
+const SearchForm: FC<SearchFormProps>= ({value, setValue}) => {
   return (
-    <div>
-        <i className="bi bi-geo-alt-fill"></i>
+    <div className={style.searchForm}>
+        <div>
+          <i className="bi bi-geo-alt-fill"></i>
+          <span>Грозный, ТРЦ "Беркат"</span>
+        </div>
         <form>
-          <input type="search" placeholder="поиск"/>
+          <input type="search" placeholder="поиск" value={value} onChange={(e) => setValue(e.target.value)}/>
+          <i className="bi bi-search"></i>
         </form>
     </div>
   );

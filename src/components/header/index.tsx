@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { getCategories } from "../../store/reducers/category/categoryFunc";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import SearchForm from "./SearchForm";
@@ -8,6 +8,12 @@ import style from "./header.module.css";
 
 const Header = () => {
   const dispatch = useAppDispatch();
+
+  const [formValue, setFormValue] = useState<string>("")
+
+  const handleFormValue = (text: string) => {
+    setFormValue(text)
+  }
 
   const { categories, isLoading, error } = useAppSelector(
     (state) => state.CategorySlice
@@ -20,8 +26,8 @@ const Header = () => {
   return (
     <div className={style.header}>
       <About/>
-      <SearchForm categories={categories} />
-      <Navbar />
+      <SearchForm value={formValue} setValue={handleFormValue}/>
+      <Navbar categories={categories}/>
     </div>
   );
 };
