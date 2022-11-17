@@ -5,9 +5,11 @@ import {
   combineReducers,
 } from "@reduxjs/toolkit";
 import CategorySlice from "./reducers/category/categorySlice";
+import BasketSlice from "./reducers/basket/basketSlice"
 
 const rootReducer = combineReducers({
   CategorySlice,
+  BasketSlice,
 });
 
 export const store = configureStore({
