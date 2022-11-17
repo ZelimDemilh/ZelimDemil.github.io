@@ -14,7 +14,7 @@ const SearchForm: FC<SearchFormProps>= ({value, setValue}) => {
           <span>Грозный, ТРЦ "Беркат"</span>
         </div>
         <form>
-          <input type="search" placeholder="поиск" value={value} onChange={(e) => setValue(e.target.value)}/>
+          <input type="text" placeholder="поиск" value={value} onChange={(e) => setValue(e.target.value)}/>
           <i className="bi bi-search"></i>
         </form>
     </div>

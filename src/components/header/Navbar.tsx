@@ -10,9 +10,12 @@ interface NavbarProps {
 const Navbar: FC<NavbarProps>= ({ categories }) => {
   return(
     <div className={style.navBar}>
+      <Link to='/category/all'>
+        Все товары
+      </Link>
       {categories.map(category => {
         return(
-          <Link to={`category/${category._id}`} key={category._id}>
+          <Link to={`/category/${category._id}`} key={category._id}>
             {category.name}
           </Link>
         )
