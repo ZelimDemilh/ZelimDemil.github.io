@@ -7,12 +7,12 @@ interface SearchFormProps {
 }
 
 
-const SearchForm: FC<SearchFormProps>= ({value, setValue}) => {
+const SearchForm: FC<SearchFormProps> = ({value, setValue}) => {
   return (
     <div>
 
     </div>
-  );
+  );  
 };
 
 export default SearchForm;
