@@ -1,4 +1,5 @@
 .app {
+  position: relative;
   max-width: 1517px;
   margin: 0 auto;
   padding: 10px;
