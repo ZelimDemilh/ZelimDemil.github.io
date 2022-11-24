@@ -1,10 +1,10 @@
 import React from "react";
-import "./mheader.scss"
+import "./mobile-navbar.scss"
 import { Link } from "react-router-dom";
 
 const MNavbar = () => {
   return (
-    <div className="navbar-mobile">
+    <div className="mobile-navbar">
       <Link to="/#">
         <i className="bi bi-house"></i>
         <span>Главная</span>
