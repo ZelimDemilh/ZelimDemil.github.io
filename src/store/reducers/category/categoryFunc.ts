@@ -1,13 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-import { ICategory } from "../../../models/ICategory";
+import { ICategory } from "../../../types/ICategory";
+import { baseService } from "../../../api/api";
 
 export const getCategories = createAsyncThunk(
   "category/upload",
   async function (_, thunkAPI) {
     try {
-      const res = await axios.get<ICategory[]>(
-        "http://localhost:8080/category/list"
+      const res = await baseService.get<ICategory[]>(
+        "/category/list"
       );
       return res.data;
     } catch (e) {

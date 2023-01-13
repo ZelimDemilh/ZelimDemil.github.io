@@ -1,25 +1,18 @@
 import React, { useState } from "react";
-import "./App.css";
-import {Routes, Route} from "react-router-dom";
 import Header from "./components/header";
-import MNavbar from "./components/mobile-navbar";
-
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./components/pages/homepage";
 
 function App() {
-
-  const [widthDevice, setWidthDevice] = useState(window.innerWidth)
-  window.addEventListener("resize", () => setWidthDevice(window.innerWidth))
+  const [widthDevice, setWidthDevice] = useState(window.innerWidth);
+  window.addEventListener("resize", () => setWidthDevice(window.innerWidth));
 
   return (
     <div className="app">
-      <Header/>
-      {
-        widthDevice < 768 ? (
-          <MNavbar/>
-        ) : (
-          2
-        )
-      }
+      <Header />
+      <Routes>
+        <Route path="/" element={<Homepage/>}/>
+      </Routes>
     </div>
   );
 }
