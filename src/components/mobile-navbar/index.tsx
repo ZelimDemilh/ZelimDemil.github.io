@@ -5,23 +5,23 @@ import { Link } from "react-router-dom";
 const MNavbar = () => {
   return (
     <div className="mobile-navbar">
-      <Link to="/#">
+      <Link to="/">
         <i className="bi bi-house"></i>
         <span>Главная</span>
       </Link>
-      <Link to="/#">
+      <Link to="/favorites">
         <i className="bi bi-heart"></i>
         <span>Избранное</span>
       </Link>
-      <Link to="/#">
+      <Link to="/search">
         <i className="bi bi-search"></i>
         <span>Поиск</span>
       </Link>
-      <Link to="/#">
+      <Link to="/basket">
         <i className="bi bi-cart2"></i>
         <span>Корзина</span>
       </Link>
-      <Link to="/#">
+      <Link to="/profile">
         <i className="bi bi-person-circle"></i>
         <span>Профиль</span>
       </Link>

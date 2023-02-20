@@ -1,4 +1,4 @@
-import { ICategory } from "../../../models/ICategory";
+import { ICategory } from "../../../types/ICategory";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { getCategories } from "./categoryFunc";
 
@@ -18,22 +18,24 @@ export const CategorySlice = createSlice({
   name: "category",
   initialState,
   reducers: {},
-  extraReducers: {
-    [getCategories.pending.type]: (state) => {
+  extraReducers: (builder) => {
+    builder.addCase(getCategories.pending, (state) => {
       state.isLoading = true;
-    },
-    [getCategories.fulfilled.type]: (
-      state,
-      action: PayloadAction<ICategory[]>
-    ) => {
-      state.categories = action.payload;
-      state.isLoading = false;
-      state.error = "";
-    },
-    [getCategories.rejected.type]: (state, action: PayloadAction<string>) => {
-      state.isLoading = false;
-      state.error = action.payload;
-    },
+    });
+
+    builder.addCase(
+      getCategories.fulfilled,
+      (state, action: PayloadAction<ICategory[]>) => {
+        state.categories = action.payload;
+        state.isLoading = false;
+        state.error = "";
+      }
+    );
+
+    // builder.addCase(getCategories.rejected, (state, action: PayloadAction<string>) => {
+    //   state.isLoading = false;
+    //   state.error = action.payload;
+    // })
   },
 });
 export default CategorySlice.reducer;

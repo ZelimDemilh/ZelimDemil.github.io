@@ -3,26 +3,30 @@
   justify-content: space-evenly;
   padding: 5px 15px;
   position: fixed;
-  border-top: #838383 solid 1px;;
+  background: #ffffff;
+  border-top: #838383 solid 1px;
+  z-index: 3;
   bottom: 0;
   right: 0;
   left: 0;
+
   a{
     color: #333333; ;
     text-decoration: none;
     text-align: center;
     align-self: center;
 
-
   :any-link{
     color: red;
   }
   }
+
   i{
     display: block;
     font-size: 24px;
     padding: 0 5px;
   }
+
   span{
     font-size: 12px;
   }

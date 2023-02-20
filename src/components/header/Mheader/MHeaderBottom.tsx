@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React, { FC } from "react";
 
-const MHeaderBottom = () => {
+interface MHeaderBottomProps {
+  value: string,
+  setValue: (text:string) => void
+}
 
-  const [value, setValue] = useState("")
-
-  const searchProduct = () => {
-
-  }
+const MHeaderBottom: FC<MHeaderBottomProps> = ({value, setValue}) => {
 
   return (
     <form className="header-mobile-panel__bottom">
       <input type="text" placeholder="Поиск" value={value} onChange={(e) => setValue(e.currentTarget.value)} />
-      <i className="bi bi-search" onClick={searchProduct}></i>
+      <i className="bi bi-search"></i>
     </form>
   );
 };
