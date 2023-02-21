@@ -3,3 +3,8 @@ export interface ICategory {
   name: string;
   image: string;
 }
+
+export type addCategory = {
+  name: string;
+  image: File
+}
