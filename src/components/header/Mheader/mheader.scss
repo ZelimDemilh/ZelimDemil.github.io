@@ -1,3 +1,6 @@
+.header-mobile-panel{
+    padding: 0 10px;
+}
 .header-mobile-panel__top{
     display: grid;
     grid-template-columns: 60% 40%;
@@ -41,7 +44,7 @@
     i{
         color:  #838383;
         position: absolute;
-        top: 15%;
+        top: 9%;
         right: 2%;
         font-size: 18px;
     }

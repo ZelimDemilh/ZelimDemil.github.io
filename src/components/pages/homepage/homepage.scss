@@ -1,9 +1,32 @@
-.newArrival{
-  padding-top: 20px;
+.welcome{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,255,59,0.5270483193277311) 200%);
+  padding: 17% 5% 17% 5%;
+
+  h1{
+    line-height: 1em;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+  }
+  p{
+    color: #5A5A5A;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1em;
+  }
+  button{
+    padding: 5px 8px;
+    background: #1f7d63;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 30px 0 0 0 ;
+  }
 }
 
-@media (max-width: 768px) {
-  .homepage{
-    height: 100vh;
-  }
+.newArrival{
+  padding: 20px 0 10px 10px;
 }

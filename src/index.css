@@ -17,6 +17,11 @@ body{
     position: relative;
     max-width: 1517px;
     margin: 0 auto;
-    padding: 10px;
     height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .app{
+        height: 45em;
+    }
 }

@@ -9,7 +9,7 @@ interface newArrivalProps{
 }
 
 const setting = {
-  perPage: 2,
+  perPage: 1.5,
   arrows: false,
   pagination: false
 }
@@ -20,7 +20,7 @@ const NewArrival: FC<newArrivalProps> = ({ products}) => {
       <h2>Новое поступление</h2>
       <Splide options={setting}>
         {products.map(product => {
-          return <SplideSlide><Card product={product}/></SplideSlide>
+          return <SplideSlide><Card key={product._id} product={product}/></SplideSlide>
         })}
       </Splide>
     </div>

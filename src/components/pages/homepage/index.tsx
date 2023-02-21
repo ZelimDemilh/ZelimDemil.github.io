@@ -21,6 +21,11 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
+      <div className="welcome">
+        <h1>Открытки, рамки, закладки и подарки</h1>
+        <p>С напоминаниями и пожеланиями</p>
+        <button>Начать покупки</button>
+      </div>
       <NewArrival products={products}/>
     </div>
   );

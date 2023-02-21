@@ -26,20 +26,20 @@ const Card: FC<CardProps> = ({ product }) => {
   return (
     <div className="card">
       <div className="card__image">
-        <img src={`${process.env.REACT_APP_API_SERVER}/${image}`} alt="product image" />
+        <img src={`${process.env.REACT_APP_API_SERVER}/${image}`} alt="product image"/>
       </div>
       <div className="card__name">
         <span>{name}</span>
       </div>
       <div className="card__sizes">
-        {sizes.map((item) => (
+        {sizes.map((item, index) => (
           <div
             className={`card__size ${
               sizeActive.width === item.width &&
               sizeActive.height === item.height &&
               "card__size_active"
             }`}
-            key={_id}
+            key={_id + index}
             onClick={() => setSizeActive(item)}
           >
             {item.width}x{item.height}
